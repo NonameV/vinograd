@@ -1,5 +1,6 @@
-import { NavAndCartHeroSection, Nav } from "./NavAndCartStyles";
+import { NavAndCartHeroSection, Nav, CartButton } from "./NavAndCartStyles";
 import navImg from "./quadrat.svg";
+import cartImg from "./Vector.svg";
 
 const NavAndCart = () => {
   return (
@@ -20,7 +21,16 @@ const NavAndCart = () => {
           </ul>
         </Nav>
       </div>
-      <div className="col-md-6 justify-content-end align-items-start"></div>
+      <div className="col-md-6 d-flex justify-content-end align-items-start">
+        <CartButton>
+          <button>
+            <img src={cartImg} alt="" /> корзина: 0
+          </button>
+          <span>
+            Ваш заказ на сумму: <span className="price">0</span> грн
+          </span>
+        </CartButton>
+      </div>
     </NavAndCartHeroSection>
   );
 };
