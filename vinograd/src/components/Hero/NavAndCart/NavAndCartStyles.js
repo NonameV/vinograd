@@ -29,6 +29,7 @@ export const CartButton = styled.div`
         margin-right: 5px;
     }
     &>button{
+        transition: 0.4s;
         width: 200px;
         padding: 17px 0;
         display: flex;
@@ -41,9 +42,14 @@ export const CartButton = styled.div`
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 6px;
+        box-shadow: none;
+        border: none;
     }
     &>span{
         font-size: 12px;
         line-height: 28px;
+    }
+    &>button:hover{
+        border-radius: 15px;
     }
 `
