@@ -7,13 +7,18 @@ import {
   DropDownContacts,
   AskQuestionButton,
 } from "./headerStyles";
+import styles from "../../../styles/app/app.js"
 import { FaViber } from "react-icons/fa";
 import logoImg from "./LOGO (1).svg";
+import { css, cx } from '@emotion/css'
 
+console.log(styles)
 const Header = () => {
   return (
     <HeaderBlock className="row">
-      <div className="col-9 d-flex">
+      <div className="col-9 d-flex" css={css`
+        background-color: green;
+      `}>
         <a href="#">
           <img src={logoImg} alt="logo" className="logo" />
         </a>
@@ -28,12 +33,13 @@ const Header = () => {
 
         <div className="dropdown contacts-dropdown">
           <DropDownToggleButton
-            class="dropdown-toggle"
+            className="dropdown-toggle"
             type="button"
             id="dropdownMenuButton"
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
+            mr='50px'
           >
             Контакты <span>↓</span>
           </DropDownToggleButton>

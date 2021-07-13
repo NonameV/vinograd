@@ -1,6 +1,6 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled/macro'
 
-import {white, oneMoreGrey} from '../../../styles/colors'
+import {white, oneMoreGrey} from '../../..//colors'
 
 export const HeaderBlock = styled.header`
     padding-top: 25px;
@@ -31,34 +31,38 @@ export const ContactsBlock = styled.div`
     }
 `
 
-export const DropDownToggleButton = styled.button`
-    width: 160px;
-    border: none;
-    border-bottom: 1px solid #fff;
-    background: transparent;
-    color: ${white};
-    text-align: left;
-    padding: 0;
-    padding-bottom: 5px;
-    padding-right: 15px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 1s;
-    &:focus{
-        outline: none;
-    }
-    &>span{
-        margin-top: -5px;
-    }
-    &:hover{
-        &>span{
-            transition: 0.4s;
-            margin-top: 0px; 
+export const DropDownToggleButton = styled.button(
+    { 
+    width: "160px",
+    border: "none",
+    borderBottom: "1px solid #fff",
+    background: "transparent",
+    color: white,
+    textAlign: "left",
+    padding: 0,
+    paddingBottom: "5px",
+    paddingRight: "15px",
+    textTransform: "uppercase",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    transition: "1s",
+    "&:focus":{
+        outline: "none"
+    },
+    "&>span":{
+        marginTop: "-5px"
+    },
+    "&:hover":{
+        "&>span":{
+            transition: "0.4s",
+            marginTop: "0px"
         }
     }
-`
+}, ({mr = 0})  => ({
+    marginRight: mr
+}))
+
 
 export const DropDownContactsInfoBlock = styled.div`
     transition: 0.4s;
